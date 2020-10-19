@@ -14,10 +14,11 @@ import java.util.List;
 
 public class ShowCarsTest {
     ShowAvailableCars sac = new ShowAvailableCars();
-    CarsDaoImpl cdi = new CarsDaoImpl();
+
 
     @Test
     public void showAllCarsTest() throws SQLException {
+        CarsDaoImpl cdi = new CarsDaoImpl();
         Cars carBMV = new Cars();
         carBMV.setBrand("BMV");
         carBMV.setModel("X!");
@@ -35,6 +36,7 @@ public class ShowCarsTest {
     }
     @Test
     public void showCarsByPriceTest() throws SQLException {
+        CarsDaoImpl cdi = new CarsDaoImpl();
         Cars carHYU = new Cars();
         carHYU.setBrand("HYUNDAI");
         carHYU.setModel("CRETA");
@@ -52,6 +54,7 @@ public class ShowCarsTest {
     }
     @Test
     public void getByBrandAndPriceTest() throws SQLException {
+        CarsDaoImpl cdi = new CarsDaoImpl();
         Cars carREN = new Cars();
         carREN.setBrand("RENAULT");
         carREN.setModel("DUSTER");
@@ -68,6 +71,7 @@ public class ShowCarsTest {
     }
     @Test
     public void getByBrandTest() throws SQLException {
+        CarsDaoImpl cdi = new CarsDaoImpl();
         Cars carMERS = new Cars();
         carMERS.setBrand("MERCEDES-BENZ");
         carMERS.setModel("A200");

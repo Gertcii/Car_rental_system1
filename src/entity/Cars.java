@@ -76,13 +76,13 @@ public class Cars {
         if (o == null || getClass() != o.getClass()) return false;
 
         Cars car = (Cars) o;
-        if (id != car.getId()) return false;
-        if (brand != null && (!brand.equals(getBrand()) || brand == null)) return false;
-        if (model != null && (!model.equals(getModel()) || model == null)) return false;
-        if (doors != getDoors()) return false;
-        if (passengers != getPassengers()) return false;
-        if (cost != car.getCost()) return false;
-        return transmission == null || (model.equals(getTransmission()) && transmission != null);
+        return id == car.id &&
+                Objects.equals(brand, car.brand) &&
+                Objects.equals(model, car.model) &&
+                Objects.equals(transmission, car.transmission) &&
+                doors == car.doors &&
+                passengers == car.passengers &&
+                cost == car.cost;
     }
 
     @Override
