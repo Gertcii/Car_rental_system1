@@ -27,6 +27,7 @@ public class RegistrationTest {
         Assert.assertEquals(driver1, driver2);
     }
 
+
     @Test
     public void testValidData() {
         Drivers driver1 = new Drivers();

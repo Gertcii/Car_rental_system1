@@ -1,13 +1,10 @@
 package tests;
 
-import com.sun.deploy.panel.JreTableModel;
 import daoImpl.CarsDaoImpl;
 import entity.Cars;
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import service.ShowAvailableCars;
-
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
