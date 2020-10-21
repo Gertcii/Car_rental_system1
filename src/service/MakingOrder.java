@@ -13,15 +13,6 @@ import java.time.LocalDate;
 public class MakingOrder {
     //оформление заказа и внесение его в бд
 
-    public void setModel(Orders order) throws SQLException {
-        OrdersDaoImpl odi = new OrdersDaoImpl();
-        odi.setModelById(order);
-    }
-
-    public void setSurname (Orders order) throws SQLException {
-        OrdersDaoImpl odi = new OrdersDaoImpl();
-        odi.setSurnameById(order);
-    }
 
     public LocalDate setDate(int year, int month, int day){
         LocalDate date =  LocalDate.of(year, month, day);
@@ -32,6 +23,7 @@ public class MakingOrder {
         Cars car = cdi.getBiId(id);
         return car;
     }
+
     public Orders fillOrderForm(Cars car, Drivers drivers, String dateFrom, String dateTo) throws SQLException {
 
         String[] dateFromSplit = (dateFrom.split("-"));
